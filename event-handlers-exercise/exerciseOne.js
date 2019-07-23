@@ -3,8 +3,13 @@
 const button = document.querySelector(".button");
 const img = document.querySelector(".image");
 
-const toggleImage = () => {
-  img.classList.toggle("image-hide");
+const showImage = () => {
+  img.classList.add("image-show");
 };
 
-button.addEventListener("click", toggleImage);
+const removeImg = () => {
+  img.classList.remove("image-show");
+};
+
+img.addEventListener("click", removeImg);
+button.addEventListener("click", showImage);

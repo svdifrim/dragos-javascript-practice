@@ -15,8 +15,12 @@
   background: greenyellow;
 }
 
-.image-hide {
+.image {
   display: none;
+}
+
+.image-show {
+  display: block;
 }
 
 .img-container {
