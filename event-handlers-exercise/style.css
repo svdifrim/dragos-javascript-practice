@@ -1,0 +1,33 @@
+.container {
+  margin: 100px auto;
+  text-align: center;
+}
+
+.button,
+.button-red {
+  padding: 8px 20px;
+  background: green;
+  border-radius: 3px;
+  color: white;
+  cursor: pointer;
+}
+
+.button-red {
+  background: red;
+}
+
+.button:hover {
+  background: greenyellow;
+}
+
+.image {
+  display: none;
+}
+
+.image-show {
+  display: block;
+}
+
+.img-container {
+  margin-top: 50px;
+}
