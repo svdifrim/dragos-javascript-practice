@@ -1,15 +1,24 @@
 // EXERCISES
 
 const button = document.querySelector(".button");
+const buttonRed = document.querySelector(".button-red");
 const img = document.querySelector(".image");
 
 const showImage = () => {
+  if (img.classList.contains("image-show")) {
+    alert("Nu exista, bro");
+  }
   img.classList.add("image-show");
 };
 
-const removeImg = () => {
+const hideImg = () => {
   img.classList.remove("image-show");
 };
 
-img.addEventListener("click", removeImg);
+const removeImg = () => {
+  img.remove();
+};
+
+img.addEventListener("click", hideImg);
 button.addEventListener("click", showImage);
+buttonRed.addEventListener("click", removeImg);

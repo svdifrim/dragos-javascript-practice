@@ -3,12 +3,17 @@
   text-align: center;
 }
 
-.button {
+.button,
+.button-red {
   padding: 8px 20px;
   background: green;
   border-radius: 3px;
   color: white;
   cursor: pointer;
+}
+
+.button-red {
+  background: red;
 }
 
 .button:hover {
