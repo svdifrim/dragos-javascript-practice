@@ -4,7 +4,8 @@
 }
 
 .button,
-.button-red {
+.button-red,
+.button-blue {
   padding: 8px 20px;
   background: green;
   border-radius: 3px;
@@ -14,6 +15,10 @@
 
 .button-red {
   background: red;
+}
+
+.button-blue {
+  background: blue;
 }
 
 .button:hover {

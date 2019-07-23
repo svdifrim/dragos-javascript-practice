@@ -1,9 +1,12 @@
 // EXERCISES
 
-const button = document.querySelector(".button");
+const buttonGreen = document.querySelector(".button");
 const buttonRed = document.querySelector(".button-red");
+const buttonBlue = document.querySelector(".button-blue");
 const img = document.querySelector(".image");
 const body = document.querySelector("body");
+
+let event = new Event("");
 
 const showImage = () => {
   if (img.classList.contains("image-show")) {
@@ -26,7 +29,12 @@ const checkForClick = e => {
   alert("Something was clicked");
 };
 
+const triggerAnotherEvent = e => {
+  buttonGreen.click();
+};
+
 img.addEventListener("click", hideImg);
-button.addEventListener("click", showImage);
+buttonGreen.addEventListener("click", showImage);
 buttonRed.addEventListener("click", removeImg);
+buttonBlue.addEventListener("click", triggerAnotherEvent);
 body.addEventListener("click", checkForClick);
