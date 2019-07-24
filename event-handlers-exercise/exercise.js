@@ -1,48 +1,48 @@
-// EXERCISES
+const greenButton = document.querySelector(".button-green");
+const redButton = document.querySelector(".button-red");
+const blueButton = document.querySelector(".button-blue");
 
-const buttonGreen = document.querySelector(".button");
-const buttonRed = document.querySelector(".button-red");
-const buttonBlue = document.querySelector(".button-blue");
-const imgContainer = document.querySelector(".img-container");
-const img = document.querySelector(".image");
+const img = document.querySelector("img");
+const parentImg = document.querySelector(".img-container");
+
 const body = document.querySelector("body");
 
-let event = new Event("customevent");
+const triggerEvent = new Event("triggerclick");
 
-const showImage = () => {
-  if (img.classList.contains("image-show")) {
+const showImg = () => {
+  img.classList.add("show-img");
+
+  if (document.querySelector("img") === null) {
     alert("Nu exista, bro");
   }
-  img.classList.add("image-show");
 };
 
-const hideImg = e => {
-  imgContainer.dispatchEvent(event);
-  img.classList.remove("image-show");
+const hideImg = () => {
+  parentImg.dispatchEvent(triggerEvent);
+  img.classList.remove("show-img");
 };
 
-const removeImg = e => {
+const removeImg = () => {
   img.remove();
 };
 
 const checkForClick = e => {
   console.log(e.target);
   console.log(e.currentTarget);
-  alert("Something was clicked");
+  alert("Something was clicked!");
 };
 
-const triggerAnotherEvent = e => {
-  buttonGreen.click();
+const triggerAnotherEvent = () => {
+  greenButton.click();
 };
 
-const getCustomEvent = e => {
-  console.log(e.type);
-  console.log("Heya");
+const logEvent = () => {
+  console.log("logging event");
 };
 
-img.addEventListener("click", hideImg);
-buttonGreen.addEventListener("click", showImage);
-buttonRed.addEventListener("click", removeImg);
-buttonBlue.addEventListener("click", triggerAnotherEvent);
-imgContainer.addEventListener("customevent", getCustomEvent);
+greenButton.addEventListener("click", showImg);
+redButton.addEventListener("click", removeImg);
+blueButton.addEventListener("click", triggerAnotherEvent);
 body.addEventListener("click", checkForClick);
+img.addEventListener("click", hideImg);
+parentImg.addEventListener("triggerclick", logEvent);
