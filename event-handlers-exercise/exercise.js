@@ -46,3 +46,28 @@ blueButton.addEventListener("click", triggerAnotherEvent);
 body.addEventListener("click", checkForClick);
 img.addEventListener("click", hideImg);
 parentImg.addEventListener("triggerclick", logEvent);
+
+const getFirstUserData = async () => {
+  try {
+    const response = await fetch(
+      "https://my-json-server.typicode.com/typicode/demo/comments"
+    );
+
+    const responseSequenced = await response.json();
+    console.log(responseSequenced);
+
+    const firstComment = responseSequenced[0].id;
+
+    const comment = await fetch(
+      `https://my-json-server.typicode.com/typicode/demo/comments/${firstComment}`
+    );
+
+    console.log(await comment.json());
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+getFirstUserData().catch(err => {
+  console.log(err);
+});
