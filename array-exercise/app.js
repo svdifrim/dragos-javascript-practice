@@ -58,5 +58,3 @@ const getThis = () => {
     console.log(item.getAge());
   });
 };
-
-getThis();
