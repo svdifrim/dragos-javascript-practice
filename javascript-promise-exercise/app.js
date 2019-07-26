@@ -7,6 +7,12 @@ const getMovie = async () => {
   // dom elements
   const movieList = document.querySelector(".movie-list");
 
+  results.sort((a, b) => {
+    return a.episode_id - b.episode_id;
+  });
+
+  console.log(results);
+
   results.map(result => {
     // console.log(result);
 
@@ -21,8 +27,6 @@ const getMovie = async () => {
       "href",
       `./movieDetail.html?id=${result.episode_id}`
     );
-
-    console.log(result.episode_id);
 
     movieList.appendChild(movieListItem);
     movieListItem.appendChild(movieName);
