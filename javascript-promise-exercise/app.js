@@ -22,6 +22,8 @@ const getMovie = async () => {
       `./movieDetail.html?id=${result.episode_id}`
     );
 
+    console.log(result.episode_id);
+
     movieList.appendChild(movieListItem);
     movieListItem.appendChild(movieName);
     movieListItem.appendChild(movieLink);
