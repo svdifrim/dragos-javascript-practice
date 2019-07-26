@@ -1,7 +1,7 @@
 (function() {
   const calculator = {
-    a: "",
-    b: "",
+    a: null,
+    b: null,
     read: function() {
       this.a = parseFloat(prompt("Enter your first name"));
       this.b = parseFloat(prompt("Enter your second number"));

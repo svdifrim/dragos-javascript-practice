@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+header {
+  width: 100%;
+  padding: 2rem;
+  background: #eeeeee;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-list {
+  list-style: none;
+}
+
+.nav-item {
+  display: inline;
+  margin-left: 1rem;
+}
+
+.nav-item a:link,
+.nav-item a:visited {
+  text-decoration: none;
+  color: #000;
+}
+
+.active-page {
+  border-bottom: 1px solid #000;
+}
+
+.movie-container {
+  background: #999;
+  padding: 20px;
+}
+
+.movie-list {
+  list-style: none;
+}
