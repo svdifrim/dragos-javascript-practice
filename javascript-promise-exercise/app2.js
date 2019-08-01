@@ -9,8 +9,6 @@ const getMovieDetail = async () => {
   const response = await fetch(url);
   const result = await response.json();
 
-  console.log(result);
-
   const movieDetailsList = document.querySelector(".movie-detail-list");
 
   const movieTitle = document.createElement("li");
