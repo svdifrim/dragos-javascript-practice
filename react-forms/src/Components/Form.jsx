@@ -18,6 +18,12 @@ class Form extends Component {
     e.preventDefault();
 
     console.log(this.state);
+    this.setState({
+      firstName: "",
+      lastName: "",
+      phone: null,
+      email: ""
+    });
   };
 
   render() {
